@@ -1,0 +1,57 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html>
+<head>
+	<title>
+		Credit Management
+	</title>
+	<link rel="stylesheet" type="text/css" href="{% static 'css/index.css' %}">
+	<style>
+		body{
+			background-image:url("{% static 'images/2.jpg' %}");
+			size: 100%; 
+		}
+	</style>
+</head>
+
+<body>
+
+<ul>
+	<li>
+		<a class="active"
+			href="/">Home
+		</a>
+	</li>
+	<li>
+		<a class="active"
+			href="/users">View Users
+		</a>
+	</li>
+	<li>
+		<a class="active"
+			href="/transfer">Transfer Credit
+		</a>
+	</li>
+	<li>
+		<a class="active"
+			href="/transactions">View Transaction
+		</a>
+	</li>	
+	
+</ul>
+<br><br><br><br><br><br>
+<div class="grid-container">
+  	<a href="/users">
+  		<div class="grid-item">View Profiles</div>
+  	</a>
+  	<a href="/transfer">
+  		<div class="grid-item">Transfer Credit</div>
+  	</a>
+  	<a href="/transactions">
+  		<div class="grid-item">View Transaction</div>  
+  	</a>
+</div>
+
+
+</body>
+</html>

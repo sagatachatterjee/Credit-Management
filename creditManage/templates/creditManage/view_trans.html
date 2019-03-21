@@ -1,0 +1,81 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html>
+<head>
+	<title>
+		Credit Management
+	</title>
+	<style type="text/css">
+		ul{
+			list-style-type: none;
+			margin: 0;
+			padding: 0;
+			overflow: hidden;
+			background-color:  rgba(255,255,255,0.3);
+		}
+		li{
+			float: right;
+		}
+		li a{
+			display: block;
+			color: white;
+			text-align: center;
+			padding: 14px 16px;
+			text-decoration: none; 
+		}
+		li a:hover{
+			background: #111;
+		}
+	
+		
+	</style>
+	<link rel="stylesheet" type="text/css" href="{% static 'css/index.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+</head>
+
+<body>
+
+<ul>
+	<li>
+		<a class="active"
+			href="/">Home
+		</a>
+	</li>
+	<li>
+		<a class="active"
+			href="/users">View Users
+		</a>
+	</li>
+	<li>
+		<a class="active"
+			href="/transfer">Transfer Credit
+		</a>
+	</li>
+	<li>
+		<a class="active"
+			href="/transactions">View Transaction
+		</a>
+	</li>	
+	
+</ul>
+<br><br><br><br><br><br>
+<table style="font-size: 30px; color: white;" align="center">
+	<tr>
+		<th style="padding: 10px;" align="center">Sender</th>
+		<th style="padding: 10px;" align="center">Receiver</th>		
+		<th style="padding: 10px;" align="center">Balance</th>
+
+	</tr>
+	{% for val in data %}
+	<tr>
+		{% if val %}
+		<td style="padding: 10px;" align="center">{{ val.trac_from }}</td>
+		<td style="padding: 10px;" align="center">{{ val.trac_to }}</td>
+		<td style="padding: 10px;" align="center">{{ val.credit }}</td>
+		{% endif %}
+	</tr>
+
+	{% endfor %}
+
+</body>
+</html>

@@ -1,0 +1,39 @@
+	ul{
+			list-style-type: none;
+			margin: 0;
+			padding: 0;
+			overflow: hidden;
+			background-color: rgba(255,255,255,0.3);
+		}
+		li{
+			float: right;
+		}
+		li a{
+			display: block;
+			color: white;
+			text-align: center;
+			padding: 14px 16px;
+			text-decoration: none; 
+		}
+		li a:hover{
+			background: #111;
+		}
+		body{
+			size: 100%; 
+		}
+		.grid-container {
+ 			 display: grid;
+  			 grid-column-gap: 50px;
+  	         grid-template-columns: auto auto auto;
+             background-color: #2196F3;
+             padding: 10px;
+             align-items: center;
+}
+
+        .grid-item {
+  			background-color: rgba(255, 255, 255, 0.8);
+  			border: 1px solid rgba(0, 0, 0, 0.8);
+  			padding: 20px;
+  			font-size: 30px;
+  			text-align: center;
+}
